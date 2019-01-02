@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Count the Character</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .textarea{
+        color:purple;
+        background-color:lightblue;
+        font-size: 25px;
+        resize:none;
+    }
+    .btn{
+        color:white;
+        background-color:red;
+        border: 2px skyblue;
+        border-radius: 10px;
+        font-size:20px;
+        height: 50px;
+        width: 50px;
+    }
+    .btn:hover{
+        color:red;
+        background-color: lightpink;
+        border: 2px red;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    </style>
+    <script>
+    function count_words() {
+        var form_word=document.wordcount.wordcount2.value
+        form_word=form_word.split(" ")
+        document.wordcount.wordcount3.value=form_word.length
+    }
+    </script>
+</head>
+<body bgcolor="orange">
+<h3>Enter your text in the given area:</h3>
+<form name="wordcount">
+<textarea name="wordcount2" cols="35" rows="10" class="textarea" wrap="virtual" placeholder="Enter your text here..."></textarea><br>
+<span onclick="count_words()" class="btn">Count words</span>
+<input type="text" name="wordcount3" size="20" readonly>
+</form>
+</body>
+</html>
